@@ -43,8 +43,9 @@ query {
 - Requesting specific fields to avoid over-fetching
 - Working with the Rick and Morty GraphQL API
 
-Task 1 - Character Pagination Queries
-Objective
+# GraphQL Character Pagination Queries - Task 1
+
+## Objective
 Create GraphQL queries to retrieve paginated lists of characters from the Rick and Morty API, demonstrating how to handle multiple records and pagination patterns.
 Key Concepts Learned
 
@@ -53,7 +54,7 @@ Plural vs Singular Queries: characters(page: Int) vs character(id: ID!)
 Results Wrapper: Multiple records are returned within a results array
 Field Selection: Requesting only necessary fields (id, name, status, image)
 
-Query Pattern for Pagination
+## Query Pattern for Pagination
 graphqlquery {
   characters(page: [PAGE_NUMBER]) {
     results {
@@ -64,15 +65,16 @@ graphqlquery {
     }
   }
 }
-Files Added (Task 1)
+
+## Files Added (Task 1)
 
 characters-page-1.graphql / characters-page-1-output.json - Characters 1-20
 characters-page-2.graphql / characters-page-2-output.json - Characters 21-40
 characters-page-3.graphql / characters-page-3-output.json - Characters 41-60
 characters-page-4.graphql / characters-page-4-output.json - Characters 61-80
 
-Response Structure Difference
-Task 0 (Single Character):
+## Response Structure Difference
+### Task 0 (Single Character):
 json{
   "data": {
     "character": {
@@ -81,7 +83,7 @@ json{
     }
   }
 }
-Task 1 (Multiple Characters):
+### Task 1 (Multiple Characters):
 json{
   "data": {
     "characters": {
@@ -99,7 +101,8 @@ json{
     }
   }
 }
-Learning Outcomes
+
+## Learning Outcomes
 
 Understanding pagination in GraphQL APIs
 Working with array responses (results)
